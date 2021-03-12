@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -22,8 +23,8 @@ public class Calendario extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calendario);
         setTitle(R.string.calendario);
-        MetodosEstaticos.pantallaCompleta(this);
         this.listaDeFechas = (List<Fecha>) getIntent().getSerializableExtra("lista de fechas");
+        if(listaDeFechas.size()==0) Toast.makeText(getApplicationContext(), "No hay resultados", Toast.LENGTH_LONG).show();
         lvCalendario = findViewById(R.id.lvCalendario);
         adaptadorFecha = new AdaptadorFecha(this, R.layout.item_fecha_adapter, (ArrayList<Fecha>) listaDeFechas);
         lvCalendario.setAdapter(adaptadorFecha);

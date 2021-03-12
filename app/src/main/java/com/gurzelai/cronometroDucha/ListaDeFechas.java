@@ -13,8 +13,8 @@ public class ListaDeFechas {
     }
 
     public void add(Ducha ducha) {
-        String hoy = MetodosEstaticos.TomarFechaDeHoy();
-        if (listaDeFechas.size() == 0 || !listaDeFechas.get(listaDeFechas.size() - 1).getFecha().equals(hoy)) {
+        String hoy = MetodosEstaticos.TomarFechaDeHoyString();
+        if (listaDeFechas.size() == 0 || !listaDeFechas.get(listaDeFechas.size() - 1).getFechaString().equals(hoy)) {
             listaDeFechas.add(new Fecha(ducha));
         } else {
             listaDeFechas.get(listaDeFechas.size() - 1).add(ducha);

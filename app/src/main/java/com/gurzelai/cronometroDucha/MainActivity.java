@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -29,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        MetodosEstaticos.pantallaCompleta(this);
         btnDucha = findViewById(R.id.btnDucha);
         tvDucha = findViewById(R.id.tvDucha);
         btnCalendario = findViewById(R.id.btnCalendario);
@@ -38,15 +38,27 @@ public class MainActivity extends AppCompatActivity {
         btnEstadisticas = findViewById(R.id.btnEstadisticas);
         btnEstadisticas.setOnClickListener(view -> abrirIntent("estadisticas"));
         listaDeFechas = new ListaDeFechas();
-        listaDeFechas.add((new Ducha(new Tiempo(2, 30)))); //una fecha siempre tendra una fucha por lo menos
-        listaDeFechas.add((new Ducha(new Tiempo(4, 26))));
-        listaDeFechas.add((new Ducha(new Tiempo(7, 34))));
-        listaDeFechas.add((new Ducha(new Tiempo(1, 23))));
-        listaDeFechas.add((new Ducha(new Tiempo(4, 49))));
-        listaDeFechas.add((new Ducha(new Tiempo(2, 45))));
-        listaDeFechas.add((new Ducha(new Tiempo(8, 12))));
-        Button btnSalir = findViewById(R.id.btnSalir);
-        btnSalir.setOnClickListener(v->System.exit(0));
+        Button btnCargarDatos = findViewById(R.id.btnCargarDatos);
+        btnCargarDatos.setOnClickListener(v-> inicializar());
+    }
+
+    private void inicializar() {
+        if(listaDeFechas.listaDeFechas.size()==0) {
+            listaDeFechas.add((new Ducha(new Tiempo(2, 40)))); //una fecha siempre tendra una fucha por lo menos
+            listaDeFechas.add((new Ducha(new Tiempo(4, 00))));
+            listaDeFechas.add((new Ducha(new Tiempo(7, 34))));
+            listaDeFechas.add((new Ducha(new Tiempo(1, 23))));
+            listaDeFechas.add((new Ducha(new Tiempo(4, 49))));
+            listaDeFechas.add((new Ducha(new Tiempo(2, 45))));
+            listaDeFechas.add((new Ducha(new Tiempo(8, 12))));
+            Toast.makeText(getApplicationContext(), "Se han cargado "+7+" duchas", Toast.LENGTH_LONG).show();
+        }
+        else{
+            for(int i = 0; i< listaDeFechas.listaDeFechas.size(); i++){
+                listaDeFechas.listaDeFechas.remove(i);
+            }
+            Toast.makeText(getApplicationContext(), "Se han borrado "+7+" duchas", Toast.LENGTH_LONG).show();
+        }
     }
 
     private void abrirIntent(String opcion) {

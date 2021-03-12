@@ -21,6 +21,9 @@ public class Tiempo implements Serializable {
     public int getMinutos() {
         return minutos;
     }
+    public int getSegundos() {
+        return segundos;
+    }
 }
 
 

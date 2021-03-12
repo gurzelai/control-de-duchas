@@ -10,7 +10,7 @@
 
 
     <LinearLayout
-        android:id="@+id/layMensual"
+        android:id="@+id/layAnual"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -23,6 +23,38 @@
             android:layout_height="wrap_content"
             android:background="@color/black"
             android:gravity="center"
+            android:text="Anual"
+            android:textSize="20sp"
+            android:textColor="@color/white" />
+        <TextView
+            android:id="@+id/tvAnual"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="60sp"
+            android:paddingTop="10sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:backgroundTint="@color/white"/>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/layMensual"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layAnual">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:gravity="center"
+            android:layout_marginTop="20sp"
             android:text="Mensual"
             android:textSize="20sp"
             android:textColor="@color/white" />
@@ -31,7 +63,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:textSize="60sp"
-            android:paddingTop="20sp"
+            android:paddingTop="10sp"
+            android:layout_gravity="center"
+            android:gravity="center"
             android:backgroundTint="@color/white"/>
 
     </LinearLayout>
@@ -60,7 +94,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:backgroundTint="@color/white"
-            android:paddingTop="20sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingTop="10sp"
             android:textSize="60sp" />
 
     </LinearLayout>
@@ -88,7 +124,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:backgroundTint="@color/white"
-            android:paddingTop="20sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingTop="10sp"
             android:textSize="60sp" />
 
     </LinearLayout>

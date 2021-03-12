@@ -4,21 +4,22 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.text.DateFormat;
+import java.text.ParseException;
 import java.util.Calendar;
+import java.util.Date;
 
 public class MetodosEstaticos {
 
-    public static String TomarFechaDeHoy() {
+    public static String TomarFechaDeHoyString() {
         Calendar c = Calendar.getInstance();
         int dia = c.get(Calendar.DATE);
         int mes = c.get(Calendar.MONTH);
         int anio = c.get(Calendar.YEAR);
         return dia + "/" + mes + "/" + anio;
+
+
     }
 
-    public static void pantallaCompleta(AppCompatActivity v) {
-        View decorView = v.getWindow().getDecorView();
-        int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY | View.SYSTEM_UI_FLAG_FULLSCREEN;
-        decorView.setSystemUiVisibility(uiOptions);
-    }
+
 }

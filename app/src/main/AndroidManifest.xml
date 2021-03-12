@@ -3,21 +3,17 @@
     package="com.gurzelai.cronometroDucha">
 
     <application
+        android:fullBackupContent="true"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CronometroSencillo">
-        <activity
-            android:name="com.gurzelai.cronometroDucha.MostrarEstadisticas"
-            android:parentActivityName="com.gurzelai.cronometroDucha.MainActivity" />
+        <activity android:name="com.gurzelai.cronometroDucha.MostrarEstadisticas" />
         <activity android:name="com.gurzelai.cronometroDucha.OpcionesColoresDuchas" />
-        <activity
-            android:name="com.gurzelai.cronometroDucha.MostrarFecha"/>
-        <activity
-            android:name="com.gurzelai.cronometroDucha.Calendario"
-            android:parentActivityName="com.gurzelai.cronometroDucha.MainActivity" />
+        <activity android:name="com.gurzelai.cronometroDucha.MostrarFecha" />
+        <activity android:name="com.gurzelai.cronometroDucha.Calendario" />
         <activity android:name="com.gurzelai.cronometroDucha.Cronometro" />
         <activity android:name="com.gurzelai.cronometroDucha.MainActivity">
             <intent-filter>

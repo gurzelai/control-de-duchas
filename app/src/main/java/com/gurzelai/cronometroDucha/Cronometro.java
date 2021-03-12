@@ -23,7 +23,6 @@ public class Cronometro extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cronometro);
-        MetodosEstaticos.pantallaCompleta(this);
         getSupportActionBar().hide();
         btnParar = (FloatingActionButton) findViewById(R.id.btnParar);
         btnTerminar = (FloatingActionButton) findViewById(R.id.btnTerminar);

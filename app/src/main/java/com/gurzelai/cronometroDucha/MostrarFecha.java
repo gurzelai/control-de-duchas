@@ -25,8 +25,7 @@ public class MostrarFecha extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mostrar_fecha);
         f = (Fecha) getIntent().getSerializableExtra("fecha");
-        getSupportActionBar().setTitle("Duchas del dia "+f.getFecha());
-        MetodosEstaticos.pantallaCompleta(this);
+        getSupportActionBar().setTitle("Duchas del dia "+f.getFechaString());
         lvDuchas = (ListView) findViewById(R.id.lvDuchas);
         lvDuchas.setAdapter(adapter = new AdaptadorDucha(getApplicationContext(), R.layout.item_ducha_adapter, (ArrayList<Ducha>) f.getDuchas()));
         btnColoresDuchas = (FloatingActionButton) findViewById(R.id.btnColoresDuchas);

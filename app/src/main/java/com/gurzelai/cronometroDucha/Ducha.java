@@ -5,6 +5,8 @@ import java.util.Calendar;
 
 public class Ducha implements Serializable {
 
+    final int PRECIO_MINUTO_DE_AGUA = 1;
+
     int anio, mes, dia, hora, minutos;
     Tiempo duracion;
 
@@ -18,7 +20,9 @@ public class Ducha implements Serializable {
         this.duracion = duracion;
     }
 
-
+    public int getPrecio(){
+        return (((duracion.getMinutos()*60)+duracion.getSegundos())/60) * PRECIO_MINUTO_DE_AGUA;
+    }
     public String getMomento(){
         return hora+":"+minutos;
     }

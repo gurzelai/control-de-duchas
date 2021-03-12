@@ -47,7 +47,7 @@ public class AdaptadorFecha extends BaseAdapter {
         v= layoutInflater.inflate(R.layout.item_fecha_adapter, null);
         // Valor actual según la posición
 
-        String dia  = fechas.get(position).getFecha();
+        String dia  = fechas.get(position).getFechaString();
 
         // Referenciamos el elemento a modificar y lo rellenamos
         TextView tvFecha = (TextView) v.findViewById(R.id.tvFecha);
