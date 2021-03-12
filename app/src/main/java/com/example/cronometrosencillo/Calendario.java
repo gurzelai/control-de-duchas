@@ -23,6 +23,7 @@ public class Calendario extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calendario);
         setTitle(R.string.calendario);
+        MetodosEstaticos.pantallaCompleta(this);
         this.listaDeFechas = (List<Fecha>) getIntent().getSerializableExtra("lista de fechas");
         lvCalendario = findViewById(R.id.lvCalendario);
         adaptadorFecha = new AdaptadorFecha(this, R.layout.item_fecha_adapter, (ArrayList<Fecha>) listaDeFechas);

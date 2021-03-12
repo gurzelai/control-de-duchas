@@ -7,8 +7,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcelable;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
     final int CODE_TIEMPO = 1;
 
-    Button btnDucha;
+    ImageButton btnDucha;
     TextView tvDucha;
     Button btnCalendario;
     ListaDeFechas listaDeFechas;
@@ -38,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        MetodosEstaticos.pantallaCompleta(this);
         btnDucha = findViewById(R.id.btnDucha);
         tvDucha = findViewById(R.id.tvDucha);
         btnCalendario = findViewById(R.id.btnCalendario);
@@ -53,6 +55,8 @@ public class MainActivity extends AppCompatActivity {
         listaDeFechas.add((new Ducha(new Tiempo(4, 49))));
         listaDeFechas.add((new Ducha(new Tiempo(2, 45))));
         listaDeFechas.add((new Ducha(new Tiempo(8, 12))));
+        Button btnSalir = findViewById(R.id.btnSalir);
+        btnSalir.setOnClickListener(v->System.exit(0));
     }
 
     private void abrirIntent(String opcion) {

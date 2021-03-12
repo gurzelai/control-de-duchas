@@ -1,6 +1,7 @@
 package com.example.cronometrosencillo;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,8 +38,14 @@ public class AdaptadorDucha extends BaseAdapter {
         tvDuracion.setText(d.getDuracion().toString());
         if(d.getDuracion().getMinutos() == cantidad){
             v.setBackgroundColor(color);
-            v.getBackground().setAlpha(50);
         }
+        else{
+            v.setBackgroundColor(Color.BLACK);
+            tvMomento.setTextColor(Color.WHITE);
+            tvDuracion.setTextColor(Color.WHITE);
+        }
+        v.getBackground().setAlpha(60);
+
         return v;
     }
 

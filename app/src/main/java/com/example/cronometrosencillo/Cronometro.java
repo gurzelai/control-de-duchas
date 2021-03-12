@@ -26,7 +26,8 @@ public class Cronometro extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cronometro);
-        pantallaCompleta();
+        MetodosEstaticos.pantallaCompleta(this);
+        getSupportActionBar().hide();
         btnParar = (FloatingActionButton) findViewById(R.id.btnParar);
         btnTerminar = (FloatingActionButton) findViewById(R.id.btnTerminar);
         btnTerminar.setOnClickListener(view -> acabar());
@@ -38,12 +39,7 @@ public class Cronometro extends AppCompatActivity {
         btnParar.setOnClickListener(view -> cambiarEstado());
     }
 
-    private void pantallaCompleta() {
-        getSupportActionBar().hide();
-        View decorView = getWindow().getDecorView();
-        int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY | View.SYSTEM_UI_FLAG_FULLSCREEN;
-        decorView.setSystemUiVisibility(uiOptions);
-    }
+
 
     private void cambiarEstado() {
         if (activo) {

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.cronometrosencillo" >
+    package="com.example.cronometrosencillo">
 
     <application
         android:allowBackup="true"
@@ -8,12 +8,18 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.CronometroSencillo" >
+        android:theme="@style/Theme.CronometroSencillo">
+        <activity
+            android:name=".MostrarEstadisticas"
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".OpcionesColoresDuchas" />
-        <activity android:name=".MostrarFecha" />
-        <activity android:name=".Calendario" />
+        <activity
+            android:name=".MostrarFecha"/>
+        <activity
+            android:name=".Calendario"
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".Cronometro" />
-        <activity android:name=".MainActivity" >
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

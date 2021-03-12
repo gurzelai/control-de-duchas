@@ -1,6 +1,7 @@
 package com.example.cronometrosencillo;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -54,9 +55,13 @@ public class AdaptadorFecha extends BaseAdapter {
         // Referenciamos el elemento a modificar y lo rellenamos
         TextView tvFecha = (TextView) v.findViewById(R.id.tvFecha);
         tvFecha.setText(dia);
+        tvFecha.setTextColor(Color.WHITE);
         TextView tvCantidad = (TextView) v.findViewById(R.id.tvCantidad);
         int cantidadDeDuchasDeEsteDia = fechas.get(position).getDuchas().size();
         tvCantidad.setText(String.valueOf(cantidadDeDuchasDeEsteDia));
+        tvCantidad.setTextColor(Color.WHITE);
+        v.setBackgroundColor(Color.BLACK);
+        v.getBackground().setAlpha(60);
         //Devolvemos la vista inflada
         return v;
     }
