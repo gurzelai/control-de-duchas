@@ -1,16 +1,14 @@
-package com.example.cronometrosencillo;
+package com.gurzelai.cronometroDucha;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.widget.ListView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-import java.net.URI;
 import java.util.ArrayList;
 
 public class MostrarFecha extends AppCompatActivity {

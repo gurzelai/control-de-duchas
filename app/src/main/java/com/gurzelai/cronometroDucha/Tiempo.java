@@ -1,4 +1,4 @@
-package com.example.cronometrosencillo;
+package com.gurzelai.cronometroDucha;
 
 import java.io.Serializable;
 

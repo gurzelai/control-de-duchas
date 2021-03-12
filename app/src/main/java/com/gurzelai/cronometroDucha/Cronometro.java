@@ -1,15 +1,12 @@
-package com.example.cronometrosencillo;
+package com.gurzelai.cronometroDucha;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.content.res.ColorStateList;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.os.SystemClock;
-import android.view.View;
 import android.widget.Chronometer;
-import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 

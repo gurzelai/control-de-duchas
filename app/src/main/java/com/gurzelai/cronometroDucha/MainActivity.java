@@ -1,4 +1,4 @@
-package com.example.cronometrosencillo;
+package com.gurzelai.cronometroDucha;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -6,26 +6,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcelable;
-import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
     ImageButton btnDucha;
     TextView tvDucha;
-    Button btnCalendario;
+    Button btnCalendario, btnEstadisticas;
     ListaDeFechas listaDeFechas;
 
     @Override
@@ -46,7 +35,8 @@ public class MainActivity extends AppCompatActivity {
         btnCalendario = findViewById(R.id.btnCalendario);
         btnDucha.setOnClickListener(view -> abrirIntent("cronometro"));
         btnCalendario.setOnClickListener(view -> abrirIntent("calendario"));
-
+        btnEstadisticas = findViewById(R.id.btnEstadisticas);
+        btnEstadisticas.setOnClickListener(view -> abrirIntent("estadisticas"));
         listaDeFechas = new ListaDeFechas();
         listaDeFechas.add((new Ducha(new Tiempo(2, 30)))); //una fecha siempre tendra una fucha por lo menos
         listaDeFechas.add((new Ducha(new Tiempo(4, 26))));
@@ -70,6 +60,11 @@ public class MainActivity extends AppCompatActivity {
             case "cronometro":
                 intent = new Intent(getApplicationContext(), Cronometro.class);
                 startActivityForResult(intent, 1);
+                break;
+            case "estadisticas":
+                intent = new Intent(getApplicationContext(), MostrarEstadisticas.class);
+                intent.putExtra("lista", (Serializable) listaDeFechas.getFechas());
+                startActivity(intent);
                 break;
         }
     }

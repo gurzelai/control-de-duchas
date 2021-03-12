@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.cronometrosencillo">
+    package="com.gurzelai.cronometroDucha">
 
     <application
         android:allowBackup="true"
@@ -10,16 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CronometroSencillo">
         <activity
-            android:name=".MostrarEstadisticas"
-            android:parentActivityName=".MainActivity" />
-        <activity android:name=".OpcionesColoresDuchas" />
+            android:name="com.gurzelai.cronometroDucha.MostrarEstadisticas"
+            android:parentActivityName="com.gurzelai.cronometroDucha.MainActivity" />
+        <activity android:name="com.gurzelai.cronometroDucha.OpcionesColoresDuchas" />
         <activity
-            android:name=".MostrarFecha"/>
+            android:name="com.gurzelai.cronometroDucha.MostrarFecha"/>
         <activity
-            android:name=".Calendario"
-            android:parentActivityName=".MainActivity" />
-        <activity android:name=".Cronometro" />
-        <activity android:name=".MainActivity">
+            android:name="com.gurzelai.cronometroDucha.Calendario"
+            android:parentActivityName="com.gurzelai.cronometroDucha.MainActivity" />
+        <activity android:name="com.gurzelai.cronometroDucha.Cronometro" />
+        <activity android:name="com.gurzelai.cronometroDucha.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

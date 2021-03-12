@@ -1,4 +1,4 @@
-package com.example.cronometrosencillo;
+package com.gurzelai.cronometroDucha;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -8,10 +8,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
-import java.util.Date;
 
 public class AdaptadorFecha extends BaseAdapter {
     private Context context;

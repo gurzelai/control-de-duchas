@@ -1,6 +1,5 @@
-package com.example.cronometrosencillo;
+package com.gurzelai.cronometroDucha;
 
-import android.app.Activity;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;

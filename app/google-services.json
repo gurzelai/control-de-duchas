@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "988441281665",
+    "project_id": "cronometro-ducha",
+    "storage_bucket": "cronometro-ducha.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:988441281665:android:b146965949f0f0e21af980",
+        "android_client_info": {
+          "package_name": "com.example.cronometrosencillo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "988441281665-sblev6rtbofsdt6fuba9pkcasipn04a4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7aozI6gvBQ6xGlGdcS0Eowpm3iDmsT08"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "988441281665-sblev6rtbofsdt6fuba9pkcasipn04a4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
