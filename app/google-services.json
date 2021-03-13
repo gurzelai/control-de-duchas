@@ -7,9 +7,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:988441281665:android:b146965949f0f0e21af980",
+        "mobilesdk_app_id": "1:988441281665:android:ccf653f6f6d7dfe51af980",
         "android_client_info": {
-          "package_name": "com.example.cronometrosencillo"
+          "package_name": "com.gurzelai.cronometrosencillo"
         }
       },
       "oauth_client": [
