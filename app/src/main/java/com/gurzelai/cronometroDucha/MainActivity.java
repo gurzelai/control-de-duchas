@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     ImageButton btnDucha;
     TextView tvDucha;
-    Button btnCalendario, btnEstadisticas;
+    Button btnCalendario, btnEstadisticas, btnPais;
     ListaDeFechas listaDeFechas;
 
     @Override
@@ -34,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
         tvDucha = findViewById(R.id.tvDucha);
         btnCalendario = findViewById(R.id.btnCalendario);
         btnDucha.setOnClickListener(view -> abrirIntent("cronometro"));
+        btnPais = findViewById(R.id.btnPais);
+        btnPais.setOnClickListener(view -> abrirIntent("pais"));
         btnCalendario.setOnClickListener(view -> abrirIntent("calendario"));
         btnEstadisticas = findViewById(R.id.btnEstadisticas);
         btnEstadisticas.setOnClickListener(view -> abrirIntent("estadisticas"));
@@ -76,6 +78,10 @@ public class MainActivity extends AppCompatActivity {
             case "estadisticas":
                 intent = new Intent(getApplicationContext(), MostrarEstadisticas.class);
                 intent.putExtra("lista", (Serializable) listaDeFechas.getFechas());
+                startActivity(intent);
+                break;
+            case "pais":
+                intent = new Intent(getApplicationContext(), ElegirPais.class);
                 startActivity(intent);
                 break;
         }

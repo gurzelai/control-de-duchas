@@ -34,8 +34,8 @@ public class AdaptadorDucha extends BaseAdapter {
         Ducha d = duchas.get(position);
         TextView tvMomento = (TextView) v.findViewById(R.id.tvMomento);
         TextView tvDuracion = (TextView) v.findViewById(R.id.tvDuracion);
-        tvMomento.setText(d.getMomento());
-        tvDuracion.setText(d.getDuracion().toString());
+        tvMomento.setText(d.getMomento().toString());
+        tvDuracion.setText(d.getDuracion().toString().toString());
         if(d.getDuracion().getMinutos() == cantidad){
             v.setBackgroundColor(color);
         }

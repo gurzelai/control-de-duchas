@@ -30,7 +30,7 @@ public class MostrarEstadisticas extends AppCompatActivity {
             tvSemanal.setText(calcularGastos("semanal"));
             tvDiario.setText(calcularGastos("diario"));
         }else{
-            String vacio = "No hay resultados";
+            java.lang.String vacio = "No hay resultados";
             tvAnual.setTextSize(25);
             tvAnual.setText(vacio);
             tvMensual.setTextSize(25);
@@ -42,7 +42,7 @@ public class MostrarEstadisticas extends AppCompatActivity {
         }
     }
 
-    private String calcularGastos(String periodo) {
+    private java.lang.String calcularGastos(java.lang.String periodo) {
         int total = calcularTotal();
 
         Date fechaInicial = listaDeFechas.get(0).getDate();
@@ -77,7 +77,7 @@ public class MostrarEstadisticas extends AppCompatActivity {
                 total = (diasDeDiferencia == 0) ? total : total / diasDeDiferencia;
                 break;
         }
-        return String.valueOf(total) + " €";
+        return java.lang.String.valueOf(total) + " €";
 
     }
 
@@ -94,13 +94,13 @@ public class MostrarEstadisticas extends AppCompatActivity {
     public static int fechasDiferenciaEnDias(Date fechaInicial, Date fechaFinal) {
 
         DateFormat df = DateFormat.getDateInstance(DateFormat.MEDIUM);
-        String fechaInicioString = df.format(fechaInicial);
+        java.lang.String fechaInicioString = df.format(fechaInicial);
         try {
             fechaInicial = df.parse(fechaInicioString);
         } catch (ParseException ex) {
         }
 
-        String fechaFinalString = df.format(fechaFinal);
+        java.lang.String fechaFinalString = df.format(fechaFinal);
         try {
             fechaFinal = df.parse(fechaFinalString);
         } catch (ParseException ex) {

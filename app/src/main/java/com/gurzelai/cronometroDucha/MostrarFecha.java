@@ -32,7 +32,7 @@ public class MostrarFecha extends AppCompatActivity {
         btnColoresDuchas.setOnClickListener(view -> abrirIntent("opciones"));
     }
 
-    private void abrirIntent(String optcionIntent) {
+    private void abrirIntent(java.lang.String optcionIntent) {
         Intent intent;
         switch (optcionIntent){
             case "opciones":

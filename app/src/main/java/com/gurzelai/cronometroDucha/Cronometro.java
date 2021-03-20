@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.os.SystemClock;
+import android.view.View;
 import android.widget.Chronometer;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -23,7 +24,7 @@ public class Cronometro extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cronometro);
-        getSupportActionBar().hide();
+        pantallaCompleta();
         btnParar = (FloatingActionButton) findViewById(R.id.btnParar);
         btnTerminar = (FloatingActionButton) findViewById(R.id.btnTerminar);
         btnTerminar.setOnClickListener(view -> acabar());
@@ -35,6 +36,12 @@ public class Cronometro extends AppCompatActivity {
         btnParar.setOnClickListener(view -> cambiarEstado());
     }
 
+    private void pantallaCompleta() {
+        getSupportActionBar().hide();
+        View decorView = getWindow().getDecorView();
+        int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
+        decorView.setSystemUiVisibility(uiOptions);
+    }
 
 
     private void cambiarEstado() {

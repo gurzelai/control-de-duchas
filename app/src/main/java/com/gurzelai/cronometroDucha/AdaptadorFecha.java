@@ -47,7 +47,7 @@ public class AdaptadorFecha extends BaseAdapter {
         v= layoutInflater.inflate(R.layout.item_fecha_adapter, null);
         // Valor actual según la posición
 
-        String dia  = fechas.get(position).getFechaString();
+        java.lang.String dia  = fechas.get(position).getFechaString();
 
         // Referenciamos el elemento a modificar y lo rellenamos
         TextView tvFecha = (TextView) v.findViewById(R.id.tvFecha);
@@ -55,7 +55,7 @@ public class AdaptadorFecha extends BaseAdapter {
         tvFecha.setTextColor(Color.WHITE);
         TextView tvCantidad = (TextView) v.findViewById(R.id.tvCantidad);
         int cantidadDeDuchasDeEsteDia = fechas.get(position).getDuchas().size();
-        tvCantidad.setText(String.valueOf(cantidadDeDuchasDeEsteDia));
+        tvCantidad.setText(java.lang.String.valueOf(cantidadDeDuchasDeEsteDia));
         tvCantidad.setTextColor(Color.WHITE);
         v.setBackgroundColor(Color.BLACK);
         v.getBackground().setAlpha(60);

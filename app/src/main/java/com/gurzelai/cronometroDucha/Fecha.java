@@ -31,7 +31,7 @@ public class Fecha implements Serializable {
     }
 
     @Override
-    public String toString() {
+    public java.lang.String toString() {
         return  fecha;
     }
 
